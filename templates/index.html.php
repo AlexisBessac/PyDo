@@ -13,7 +13,7 @@
     </div>
     <section class="my-4">
         <h1 class="text-center">PyDo</h1>
-        <div>
+        <div class="my-4">
             <p class="text-center">
                 Organisez votre quotidien avec simplicité grâce à PyDo.
             </p>
