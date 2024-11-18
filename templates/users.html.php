@@ -1,6 +1,11 @@
 <section class="container py-5">
     <h1 class="text-center my-4">Gestion des utilisateurs</h1>
-    <table class="table table-bordered table-stripped">
+    <div>
+    <div>
+        <a href="/?page=add-user"><button class="btn btn-primary my-4" title="Créer un utilisateur">Créer un utilisateur</button></a>
+    </div>
+    </div>
+    <table class="table table-bordered table-striped">
         <thead>
             <th>Prénom</th>
             <th>Nom</th>
@@ -14,12 +19,12 @@
                     <td><?= $users['lastname'] ?></td>
                     <td><?= $users['email'] ?></td>
                     <td>
-                        <a href="/?page=edit-user&id=<?= $users['id_utilisateur'] ?>" class="btn btn-sucess" title="Modifier">Modifier</a>
+                        <a href="/?page=edit-user&id=<?= $users['id_utilisateur'] ?>" class="btn btn-success" title="Modifier">Modifier</a>
                     </td>
                     <td>
                         <form action="/?page=delete-user" method="POST" onsubmit="return confirm('Etes vous sûr de vouloir supprimer cet utilisateur ?')">
                             <input type="hidden" name="user_id" value="<?= $users['id_utilisateur'] ?>" />
-                            <button class="bt btn-danger" type="submit" title="Supprimer">Supprimer</button>
+                            <button class="btn btn-danger" type="submit" title="Supprimer">Supprimer</button>
                         </form>
                     </td>
                 </tr>
