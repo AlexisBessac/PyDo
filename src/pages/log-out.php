@@ -8,6 +8,6 @@ if (isset($_GET['logout']))
     // Détruire la session
     session_unset();
     session_destroy();
-    header('Location: /?page=index'); // Rediriger vers la page de connexion
+    header('Location: /?page=index');
     exit;
 }
