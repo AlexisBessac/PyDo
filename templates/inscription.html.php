@@ -5,7 +5,7 @@
             <form method="POST" class="my-4" action="">
                 <div class="mb-3">
                     <label for="firstname" class="form-label">Prénom</label>
-                    <input type="text" class="form-control <?= isset($errors) && !empty($errors['firstname']) ? 'is-invalid' : '' ?>" name="firstname" id="firstname" required placeholder="ex: John">
+                    <input type="text" class="form-control <?= isset($errors) && !empty($errors['firstname']) ? 'is-invalid' : '' ?>" name="firstname" id="firstname" required placeholder="John">
                     <?php if(isset($errors) && !empty($errors['firstname'])): ?>
                         <div class="invalid-feedback d-block">
                            <?= $errors['firstname'] ?>
@@ -14,7 +14,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="lastname" class="form-label">Nom</label>
-                    <input type="text" class="form-control <?= isset($errors) && !empty($errors['lastname']) ? 'is-invalid' : '' ?>" name="lastname" id="lastname" required placeholder="ex: Doe">
+                    <input type="text" class="form-control <?= isset($errors) && !empty($errors['lastname']) ? 'is-invalid' : '' ?>" name="lastname" id="lastname" required placeholder="Doe">
                     <?php if(isset($errors) && !empty($errors['lastname'])): ?>
                         <div class="invalid-feedback d-block">
                            <?= $errors['lastname'] ?>
@@ -23,7 +23,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control <?= isset($errors) && !empty($errors['email']) ? 'is-invalid' : '' ?>" name="email" id="email" aria-describedby="emailHelp" required placeholder="ex: john.doe@email.fr">
+                    <input type="email" class="form-control <?= isset($errors) && !empty($errors['email']) ? 'is-invalid' : '' ?>" name="email" id="email" aria-describedby="emailHelp" required placeholder="john.doe@email.fr">
                     <?php if(isset($errors) && !empty($errors['email'])): ?>
                         <div class="invalid-feedback d-block">
                            <?= $errors['email'] ?>

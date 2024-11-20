@@ -5,7 +5,7 @@
             <form method="POST" action="" class="my-4">
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control <?= isset($errors) && !empty($errors['email']) ? 'is-invalid' : '' ?>" name="email" id="email" aria-describedby="emailHelp" required placeholder="ex: john.doe@email.fr">
+                    <input type="email" class="form-control <?= isset($errors) && !empty($errors['email']) ? 'is-invalid' : '' ?>" name="email" id="email" aria-describedby="emailHelp" required placeholder="john.doe@email.fr">
                     <?php if(isset($errors) && !empty($errors['email'])): ?>
                         <div class="invalid-feedback d-block">
                            <?= $errors['email'] ?>

@@ -1,9 +1,9 @@
 <section class="container py-5">
     <h1 class="text-center my-4">Gestion des utilisateurs</h1>
     <div>
-    <div>
-        <a href="/?page=add-user"><button class="btn btn-primary my-4" title="Créer un utilisateur">Créer un utilisateur</button></a>
-    </div>
+        <div>
+            <a href="/?page=add-user"><button class="btn btn-primary my-4" title="Créer un utilisateur">Créer un utilisateur</button></a>
+        </div>
     </div>
     <table class="table table-bordered table-striped">
         <thead>
@@ -13,7 +13,7 @@
             <th colspan="2">Actions</th>
         </thead>
         <tbody>
-        <?php foreach ($user as $users) : ?>
+            <?php foreach ($user as $users) : ?>
                 <tr>
                     <td><?= $users['firstname'] ?></td>
                     <td><?= $users['lastname'] ?></td>

@@ -6,4 +6,4 @@ $description = "Sur cette page l'utilisateur trouve la liste de ces tâches qu'i
 require '../src/data/db-connect.php';
 
 $query = $dbh->query("SELECT * FROM task");
-$user = $query->FETCHALL();
+$task = $query->FETCHALL();
