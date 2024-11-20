@@ -20,13 +20,15 @@
         <?php require '../templates/' . $page . '.html.php'; ?>
     </main>
     <footer class="footer">
-        <div class="row">
-            <div class="col-lg-6 mx-2">
-                <p>PyDO</p>
-            </div>
-            <div class="col-lg-6">
-                <p>Tous Droits Réservés</p>
-                <p>Alexis Bessac 2024</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <p>PyDO</p>
+                </div>
+                <div class="col-lg-6">
+                    <p>Tous Droits Réservés</p>
+                    <p>Alexis Bessac 2024</p>
+                </div>
             </div>
         </div>
     </footer>
