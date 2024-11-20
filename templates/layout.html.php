@@ -21,7 +21,7 @@
     </main>
     <footer class="footer">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6 mx-2">
                 <p>PyDO</p>
             </div>
             <div class="col-lg-6">
