@@ -7,7 +7,6 @@ $description = "Sur cette page l'utilisateur trouve la liste de ces tâches qu'i
 
 require '../src/data/db-connect.php';
 
-// Remplacez cette ligne par la manière dont vous obtenez l'ID de l'utilisateur
 $id_utilisateur = $_SESSION['id_utilisateur'];
 
 $query = $dbh->prepare("SELECT * FROM task WHERE id_utilisateur = :id_utilisateur");
