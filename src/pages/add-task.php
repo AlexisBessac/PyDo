@@ -27,8 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_task_submit']))
         $id_utilisateur = $_SESSION['id_utilisateur'];
         $query = $dbh->prepare("INSERT INTO task (name, created_at, id_utilisateur) VALUES (:name, :created_at, :id_utilisateur)");
         $result = $query->execute([
-            'name' => $_POST['task_name'],
-            'created_at' => $_POST['created_at'],
+            'name' => htmlspecialchars($_POST['task_name']),
+            'created_at' => htmlspecialchars($_POST['created_at']),
             'id_utilisateur' => $id_utilisateur
         ]);
 
