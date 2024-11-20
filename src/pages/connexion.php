@@ -28,7 +28,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login_form_submit']))
 
         // Vérification de l'email en BDD
         $email = $_POST['email'];
-        $query = $dbh->prepare("SELECT * FROM utilisateur WHERE email = :email");
+        $query = $dbh->prepare("SELECT u.*, r.name 
+                                FROM utilisateur u 
+                                LEFT JOIN role r ON u.id_role = r.id_role 
+                                WHERE u.email = :email");
+
         $query->execute(['email' => $email]);
         $user = $query->fetch();
 
@@ -42,9 +46,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login_form_submit']))
                 // Authentification réussie et Ouverture de la session
                 session_start();
                 $_SESSION['id_utilisateur'] = $user['id_utilisateur'];
+                $_SESSION['role'] = $user['name'];
 
-                header('Location: /?page=dashboard-task');
-                exit;
+                if($user['name'] == "Utilisateur")
+                {
+                    header('Location: /?page=dashboard-task');
+                    exit;
+                }
+                else if($user['name'] == "Administrateur")
+                {
+                    header('Location: /?page=users');
+                    exit;
+                }
             }
             else
             {

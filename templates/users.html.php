@@ -1,5 +1,8 @@
 <section class="container py-5">
     <h1 class="text-center my-4">Gestion des utilisateurs</h1>
+    <div class="button-container">
+        <a href="/?page=index"><button class="btn btn-primary" title="Déconnexion">Déconnexion</button></a>
+    </div>
     <div>
         <div>
             <a href="/?page=add-user"><button class="btn btn-primary my-4" title="Créer un utilisateur">Créer un utilisateur</button></a>
