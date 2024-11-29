@@ -27,8 +27,8 @@ if (!empty($_GET['id']))
         {
             $query = $dbh->prepare("UPDATE task SET name = :name, created_at = :created_at WHERE id_task = :id_task");
             $query->execute([
-                'name' => $_POST['task_name'],
-                'created_at' => $_POST['created_at'],
+                'name' => htmlspecialchars($_POST['task_name']),
+                'created_at' => htmlspecialchars($_POST['created_at']),
                 'id_task' => $id_task,
             ]);
 

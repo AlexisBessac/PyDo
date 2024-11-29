@@ -51,11 +51,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_user_submit']))
         require '../src/data/db-connect.php';
         $query = $dbh->prepare("INSERT INTO utilisateur(firstname, lastname, email, password, id_role) VALUES(:firstname, :lastname, :email, :password, :id_role)");
         $user = $query->execute([
-            'firstname' => $_POST['firstname'],
-            'lastname' => $_POST['lastname'],
-            'email' => $_POST['email'],
+            'firstname' => htmlspecialchars($_POST['firstname']),
+            'lastname' => htmlspecialchars($_POST['lastname']),
+            'email' => htmlspecialchars($_POST['email']),
             'password' => $newMdp,
-            'id_role' => $_POST['role_id']
+            'id_role' => htmlspecialchars($_POST['role_id'])
         ]);
 
         if(!$dbh->lastInsertId())
