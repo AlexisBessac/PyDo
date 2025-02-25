@@ -11,6 +11,26 @@ body{
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-style: normal;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+h1.display-4 {
+    font-weight: 700;
+    color: #007bff;
+}
+
+p.lead {
+    font-size: 1.25rem;
+    color: #6c757d;
+}
+
+a.btn {
+    transition: transform 0.2s ease-in-out;
+}
+
+a.btn:hover {
+    transform: scale(1.05);
 }
 
 .button-container {

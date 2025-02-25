@@ -1,8 +1,8 @@
 <section class="container py-5">
     <h1 class="text-center my-4">Inscription</h1>
     <div class="row justify-content-around align-items-center">
-        <div class="col-12 col-md-4">
-            <form method="POST" class="my-4" action="">
+        <div class="col-12 col-md-6 col-lg-4">
+            <form method="POST" class="my-4 p-4 border rounded shadow-sm bg-white" action="">
                 <div class="mb-3">
                     <label for="firstname" class="form-label">Prénom</label>
                     <input type="text" class="form-control <?= isset($errors) && !empty($errors['firstname']) ? 'is-invalid' : '' ?>" name="firstname" id="firstname" required placeholder="John">
@@ -39,7 +39,8 @@
                         </div>
                     <?php endif; ?>
                 </div>
-                <button type="submit" class="btn btn-primary" name="register_form_submit" title="S'inscrire">S'inscrire</button>
+                <button type="submit" class="btn btn-primary w-100" name="register_form_submit" title="S'inscrire">S'inscrire</button>
             </form>
         </div>
+    </div>
 </section>
